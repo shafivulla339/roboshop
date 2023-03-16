@@ -18,4 +18,4 @@ services:
     image: catalogue:v1
     container_name: catalogue
     depends_on:
-    - mongodbs
+    - mongodb
