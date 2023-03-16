@@ -1,21 +1,21 @@
 version: "3.9"
 networks:
-- roboshop:
+  roboshop:
     driver: bridge
 services:
-- web:
-  - image: web:v1
+  web:
+    image: web:v1
     container_name: web
     ports:
     - "80:80"
     depends_on:
     - catalogue
-      mongodb
-- mongodb:
-  - image: mongodb:v1
+    - mongodb
+  mongodb:
+    image: mongodb:v1
     container_name: mongodb
-- catalogue:
-  - image: catalogue:v1
+  catalogue:
+    image: catalogue:v1
     container_name: catalogue
     depends_on:
     - mongodbs
