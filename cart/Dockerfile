@@ -1,4 +1,4 @@
-FROM node:14
+FROM node:14-alpine
 EXPOSE 8080
 WORKDIR /opt/server
 # RUN addgroup cart && adduser --system cart && usermod -aG cart cart
