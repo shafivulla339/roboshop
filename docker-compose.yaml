@@ -35,6 +35,11 @@ services:
     depends_on:
       - redis
       - catalogue
+      - user
+      - cart
+      - mysql
+      - shipping
+      - payment
   mysql:
     image: mysql:v1
     container_name: mysql
